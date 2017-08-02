@@ -1,4 +1,4 @@
-package com.nextiva.dataplatform.hbase;
+package com.kb.hbase;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
