@@ -1,0 +1,47 @@
+# 01/01 Agents
+{"entityType":"Agent","updatedAt":"2017-01-01 06:00:00.000000-07:00","agentId":4000,"agentName":"John Mason","agentEmail":"jmason@test.com"}
+{"entityType":"Agent","updatedAt":"2017-01-01 06:20:00.000000-07:00","agentId":4001,"agentName":"Jack Russell","agentEmail":"jrussell@test.com"}
+{"entityType":"Agent","updatedAt":"2017-01-01 06:23:00.000000-07:00","agentId":4002,"agentName":"Jim Johnson","agentEmail":"jjohnson@test.com"}
+{"entityType":"Agent","updatedAt":"2017-01-01 06:25:00.000000-07:00","agentId":4003,"agentName":"Michael Hill","agentEmail":"mhill@test.com"}
+{"entityType":"Agent","updatedAt":"2017-01-01 06:28:00.000000-07:00","agentId":4004,"agentName":"David Castro","agentEmail":"dcastro@test.com"}
+
+# 02/01 Departments
+{"entityType":"Department","updatedAt":"2017-02-01 06:35:00.000000-07:00","departmentId":3000,"departmentName":"Sales"}
+{"entityType":"Department","updatedAt":"2017-02-01 06:40:00.000000-07:00","departmentId":3001,"departmentName":"Billing"}
+{"entityType":"Department","updatedAt":"2017-02-01 06:43:00.000000-07:00","departmentId":3002,"departmentName":"Accounts"}
+{"entityType":"Department","updatedAt":"2017-02-01 06:49:00.000000-07:00","departmentId":3003,"departmentName":"Onboarding"}
+
+# 07/01 7:00 AM Created Case 1000
+{"caseId":1000,"statusType":"Open","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 07:00:00.000000-07:00","agentId":4000,"departmentId":3000,"caseNumber":"CBS-265423","messages":null}
+
+# 07/01 7:15 AM  Updated Case 1000 to In-Progress
+{"caseId":1000,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 07:15:00.000000-07:00","agentId":4000,"departmentId":3000,"caseNumber":"CBS-265423","messages":null}
+
+# 07/01 8:00 AM  Created Case 1001
+{"caseId":1001,"statusType":"Open","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 08:00:00.000000-07:00","agentId":4001,"departmentId":3001,"caseNumber":"CJS-265423","messages":null}
+
+# 07/01 8:25 AM  Updated Case 1001 to In-Progress
+{"caseId":1001,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 08:25:00.000000-07:00","agentId":4001,"departmentId":3001,"caseNumber":"CJS-265423","messages":null}
+
+# 07/01 10:00 AM  Add message to Case 1000
+{"caseId":1000,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 10:00:00.000000-07:00","agentId":4000,"departmentId":3000,"caseNumber":"CBS-265423","messages":[2000]}
+{"message":"Hello World! Message 1 for Case 1000","caseId":1000,"entityType":"Message","updatedAt":"2017-07-01 10:00:01.000000-07:00","messageId":2000}
+
+# 07/01 10:30 AM  Add message to Case 1000
+{"caseId":1000,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-01 10:30:00.000000-07:00","agentId":4000,"departmentId":3000,"caseNumber":"CBS-265423","messages":[2000,2001]}
+{"message":"Hello World! Message 2 for Case 1000","caseId":1000,"entityType":"Message","updatedAt":"2017-07-01 10:30:01.000000-07:00","messageId":2001}
+
+# 07/10 08:30 AM  Change Department, Agent and Add Message for Case 1000
+{"caseId":1000,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-10 08:30:00.000000-07:00","agentId":4004,"departmentId":3003,"caseNumber":"CBS-265423","messages":[2000,2001, 2002]}
+{"message":"Assigning to Onboarding","caseId":1000,"entityType":"Message","updatedAt":"2017-07-10 08:30:01.000000-07:00","messageId":2002}
+
+
+# 07/16 08:30 AM  Change Department, Agent and Add Message for Case 1001
+{"caseId":1001,"statusType":"In-Progress","channelType":"Email","entityType":"Case","updatedAt":"2017-07-16 08:30:00.000000-07:00","agentId":4003,"departmentId":3002,"caseNumber":"CJS-265423","messages":[2003]}
+{"message":"Assigning to Accounts","caseId":1001,"entityType":"Message","updatedAt":"2017-07-10 08:30:01.000000-07:00","messageId":2003}
+
+# 07/20 09:30 AM  Resolved Case 1000
+{"caseId":1000,"statusType":"Resolved","channelType":"Email","entityType":"Case","updatedAt":"2017-07-20 09:30:00.000000-07:00","agentId":4004,"departmentId":3003,"caseNumber":"CBS-265423","messages":[2000,2001, 2002]}
+
+# 07/25 08:30 AM  Closed Case 1001
+{"caseId":1001,"statusType":"Closed","channelType":"Email","entityType":"Case","updatedAt":"2017-07-25 08:30:00.000000-07:00","agentId":4003,"departmentId":3002,"caseNumber":"CJS-265423","messages":[2003]}
